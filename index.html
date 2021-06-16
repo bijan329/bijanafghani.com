@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
+	<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+<title> Bijan Afghani </title>
+<link rel="stylesheet" href="c1.css" />
+<script src = "games.js"> 
+</script>
+<div class="tab">
+<button class="tablink" onclick="openTab('Home', this)" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openTab('About', this)" id ='about'>About</button>
+<a href="BijanAfghaniResume.pdf" download="BijanAfghaniResume">
+<button class="tablink" id ='download'>Download Resume</button>
+</a>
+</div>
+<div id = "Home" class ="tabcontent">
+<br>
+<div id="myname">
+	<h1>Bijan Afghani</h1>
+</div>
+<div id ="me">
+<p class="aboutMe">
+	Hi. <br>
+	I am an aspiring software developer
+	 and recent graduate of the University
+	  of California, San Diego, <br>with a degree in Mathematics - Computer Science.
+</p>
+</div>
+<br>
+<hr>
+<br>
+<p id="projs"> As a fan of games that revolve around probability, I thought it would be interesting to recreate a couple of my favorites. </p>
+<div id="projects" style="overflow: hidden;">
+<p class="project1" id="proj1">
+Play Single-Deck BlackJack <br>
+<br>
+<button onclick="JavaScript:startGame()">Start</button>
+</p>
+<p class="project2" id = "proj2">
+Play Roulette<br>
+<br>
+<button onclick="JavaScript:takeBet()">Start</button>
+</p>
+<!-- No war 
+<p class="project3" id = "3">
+Play War the Card Game<br>
+<br>
+<button onclick="JavaScript:startWar()">Start</button>
+</p>
+-->
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+
+<div id = "About" class ="tabcontent">
+	<h2> Photo Puzzle</h2>
+	<p>Unscramble Me!</p>
+	<br>
+	<!-- <img src="images/Bijan.JPG" class="center" id="bijan"> -->
+	<div id="canvas1" class="center"></div>
+	<div id="previews" class="center"></div>
+	
+	<button onclick="revert()" id='about-section'>Complete</button>
+	<button onclick="scramble()" id='about-section'>Scramble</button>
+	
+
+	<br>
+	<h4>About Me</h4>
+	<p>
+		I graduated from the University of California
+		 - San Diego with a B.S. in Mathematics
+		  - Computer Science in June of 2020.
+		   I am pursuing an opportunity
+			in a software development,
+			 or web development role.
+			  In my free time I am a twenty-two year old who enjoys traveling,
+			   watching and playing sports, working on various projects (like this one),
+				and weightlifting. 
+	</p>
+	<h4>About The Site</h4>
+	<p>
+		I put this site together in a couple of days, although I am constantly updating and improving it.
+		I built  BlackJack, Roulette, and Photo Puzzle with vanilla JavaScript, and I am currently working on adding a Slot Machine interface
+		using JQuery. The most complicated part of building BlackJack was creating an algorithm to automatically attribute a 1 or an 11 to an Ace based on your current total. This was done by summing all player cards that are not Aces. 
+		One cannot have more than one Ace worth 11 or else your total will be greater than 21. 
+		If the number of Aces in your hand is greater than 1, all Aces except one's value must be 1.
+		 Then based on your total after those are accounted for,
+		  the last Ace will have a value of 1 if an addition of 11 to your total
+		   would cause a bust, otherwise the value will be 11.
+		   The most difficult part of Roulette, however, was animating the roulette wheel using CSS.
+			The site itself is run by a simple AWS EC2 Apache web server. If you like what I've done here please feel free to reach out 
+			to my email or connect with me on LinkedIn.
+	</p>
+	<br>
+	<a href="mailto:bijanafghani@gmail.com" target="_blank" class="center">Gmail</a>
+	<br>
+	<a href="http://www.linkedin.com/in/bijanafghani/" target="_blank" class="center">LinkedIn</a>
+	<!--
+	<div class="masonry-layout">
+		<div class="masonry-layout__panel">
+		  <div class="masonry-layout__panel-content">
+		
+			<img src="images/IMG1425.JPG" class ="mason">
+		  </div>
+		</div>
+		<div class="masonry-layout__panel">
+		  <div class="masonry-layout__panel-content">
+		
+			<img src="images/IMG1561.JPG" class = "mason">
+		  </div>
+		</div>
+		<div class="masonry-layout__panel">
+		  <div class="masonry-layout__panel-content">
+			
+			<img src="images/IMG1593.JPG" class= "mason">
+		  </div>
+		</div>
+		<div class="masonry-layout__panel">
+			<div class="masonry-layout__panel-content">
+			
+			  <img src="images/IMG_1833.JPG" class ="mason">
+			</div>
+		  </div>
+		  <div class="masonry-layout__panel">
+			<div class="masonry-layout__panel-content">
+			 
+			  <img src="images/IMG_1750.JPG" class = "mason">
+			</div>
+		  </div>
+		  <div class="masonry-layout__panel">
+			<div class="masonry-layout__panel-content">
+			
+			  <img src="images/IMG_1841.JPG" class= "mason">
+			</div>
+		  </div>
+		  <div class="masonry-layout__panel">
+			<div class="masonry-layout__panel-content">
+		
+			  <img src="images/IMG_1874.JPG" class ="mason">
+			</div>
+		  </div>
+		  <div class="masonry-layout__panel">
+			<div class="masonry-layout__panel-content">
+			
+			  <img src="images/IMG_2654.JPG" class ="mason">
+			</div>
+		  </div>
+		  <div class="masonry-layout__panel">
+			<div class="masonry-layout__panel-content">
+			
+			  <img src="images/IMG_1572.JPG" class ="mason">
+			</div>
+		  </div>
+	  </div>
+	-->
+</div>
+
+<script>
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+</script>
+</body>
+
+
+</html>
